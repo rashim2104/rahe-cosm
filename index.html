@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/resources/logo-wbg.png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>RAHE-Home</title>
+</head>
+<body>
+    <div class="header">
+        <div class="props">
+            <img src="/resources/logo.png" alt="Logo">
+            <h2>Home</h2>
+        </div>
+        <div class="threel" onclick="toggleSlide()">
+            <img src="/resources/header/2-lines.png" alt="More">
+        </div>
+    </div>
+    <div class="slide-container" id="slideContainer">
+        <img src="/resources/header/cross.png" alt="Close" onclick="toggleSlide()">
+    </div>
+    
+
+    <script>
+        function toggleSlide() {
+        var slideContainer = document.getElementById("slideContainer");
+        slideContainer.classList.toggle("active");
+        }
+
+    </script>
+</body>

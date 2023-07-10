@@ -1,0 +1,64 @@
+.header {
+    border: 5px solid black;
+    border-radius: 4rem;
+    overflow: hidden;
+    background-color: #F1E4AA;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+body{
+    background-color: bisque;
+}
+
+.props{
+    align-items: center;
+    display: flex;
+}
+
+.props img{
+    height: 400px;
+    align-items: flex-start;
+    margin-right: 150%;
+}
+
+.props h2{
+    align-items: flex-end;
+    font-size: 40px;
+}
+
+.threel img {
+    height: 80px;
+    display: flex;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.slide-container {
+    position: fixed;
+    border: 2px solid black;
+    border-radius: 1rem;
+    overflow: hidden;
+    top: 0;
+    right: -500px; /* Start with the slide hidden */
+    height: 100vh;
+    width: 500px;
+    background-color: #ffffff;
+    transition: right 0.5s ease-in-out;
+    z-index: 999;
+}
+
+.slide-container img{
+    height: 100px;
+    cursor: pointer;
+    margin-left: 80%;
+    
+}
+
+.slide-container.active {
+    right: 0; /* Show the slide by moving it to the right */
+}
