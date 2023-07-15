@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'DIN Neuzeit Grotesk';
+    src: local('DIN Neuzeit Grotesk Light'), local('DIN-Neuzeit-Grotesk-Light'),
+        url('DINNeuzeitGroteskLT-Light.woff2') format('woff2'),
+        url('DINNeuzeitGroteskLT-Light.woff') format('woff'),
+        url('DINNeuzeitGroteskLT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }

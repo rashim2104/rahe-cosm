@@ -8,25 +8,90 @@
     <title>RAHE-Home</title>
 </head>
 <body>
+    <div class="offer" id="offerhead">
+        <h2>Shop for ₹599+ & get 2 Masks free!</h2>
+        <div class="offercls" onclick="closeOffer()">
+          <img src="/resources/header/Untitled design.png" alt="Close">
+        </div>
+    </div>
+
     <div class="header">
+        <div class="propsimg">
+            <a href="/index.html"><img src="/resources/logo.png" alt="Logo"></a>
+        </div>
         <div class="props">
-            <img src="/resources/logo.png" alt="Logo">
-            <h2>Home</h2>
+            <h2 class="catcls">Categories</h2>    
+            <img class="head-arrdown" src="/resources/header/ardown.png" alt="Expand">
+            <h2>Trending Now</h2>
+            <h2>Combos</h2>
+            <h2>Help</h2>
+            <img class="head-arrdown" src="/resources/header/ardown.png" alt="Expand">
         </div>
-        <div class="threel" onclick="toggleSlide()">
-            <img src="/resources/header/2-lines.png" alt="More">
+        <div class="threel">
+            <img src="/resources/header/truck.png" alt="Tracking">
+            <img src="/resources/header/profile.png" alt="Profile">
+            <img class="searchhead" src="/resources/header/search.png" alt="Search">
+            <img src="/resources/header/cart.png" alt="Cart">
         </div>
     </div>
-    <div class="slide-container" id="slideContainer">
-        <img src="/resources/header/cross.png" alt="Close" onclick="toggleSlide()">
+    <div class="slidecontent">
+        <div class="slideheads">
+
+        </div>
     </div>
-    
+    <div class="products">
+        <div class="product-item">
+            <img src="/resources/prods-png/sale.webp" alt="Sale">
+            <p class="product-alt">Sale</p>
+        </div>
+        <div class="product-item">
+            <img src="/resources/prods-png/face.avif" alt="Face">
+            <p class="product-alt">Face</p>
+        </div>
+        <div class="product-item">
+            <img src="/resources/prods-png/eyes.avif" alt="Eyes">
+            <p class="product-alt">Eyes</p>
+        </div>
+        <div class="product-item">
+            <img src="/resources/prods-png/lips.avif" alt="Lips">
+            <p class="product-alt">Lips</p>
+        </div>
+        <div class="product-item">
+            <img src="/resources/prods-png/skincare.webp" alt="Skincare">
+            <p class="product-alt">Skincare</p>
+        </div>
+    </div>
+    <div class="sldshowwhole">
+        <div class="slide">
+            <img src="/resources/pills/Slide1.png" alt="Blue">
+        </div>
+        <div class="slide">
+            <img src="/resources/pills/Slide2.png" alt="Green">
+        </div>
+        <div class="slide">
+            <img src="/resources/pills/Slide3.png" alt="Purple">
+        </div>
+        <div class="slide">
+            <img src="resources/pills/Slide4.png" alt="Red">
+        </div>
+        <button class="prev-btn">
+            <img src="/resources/arrowleft.png" alt="" height="40px">
+        </button>
+        <button class="next-btn">
+            <img src="/resources/arrowright.png" alt="" height="40px">
+        </button>
+    </div>
+    <div class="navigation-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class="heading-block">
+        <h2 class="heading-type">
+            TRENDING NOW
+        </h2>
+    </div>
 
-    <script>
-        function toggleSlide() {
-        var slideContainer = document.getElementById("slideContainer");
-        slideContainer.classList.toggle("active");
-        }
-
-    </script>
+<script src="/assets/js/jaava.js"></script>
 </body>

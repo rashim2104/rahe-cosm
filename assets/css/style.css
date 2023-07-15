@@ -1,64 +1,312 @@
-.header {
-    border: 5px solid black;
-    border-radius: 4rem;
-    overflow: hidden;
-    background-color: #F1E4AA;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 10rem;
+@font-face {
+    font-family: 'FuturaBook';
+    src: url('/resources/fonts/futura/book.ttf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'Futura';
+    src: url('/resources/fonts/futura/futur.ttf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'DNG';
+    src: url('/resources/fonts/DINNeuzeitGroteskLT-Light/light.ttf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'FuturaExBB';
+    src: url('/resources/fonts/futura/ftexbb.ttf') format('opentype');
+  }
+  
+  .offer {
+    font-family: 'FuturaBook';
+    height: 4rem;
+    display: flex;
+    background-color: #8F1A14;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .offercls img {
+    position: absolute;
+    filter: invert(100%);
+    top: 10px;
+    right: 10px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .header {
+    background-color: #1A1A1A;
+    color: white;
+    height: 6rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0 1rem;
-}
-
-body{
-    background-color: bisque;
-}
-
-.props{
+    overflow: hidden;
+  }
+  
+  .header h2 {
+    font-family: 'DNG';
+    font-size: 1px;
+  }
+  
+  .propsimg {
+    margin-right: 0%;
+  }
+  
+  .head-arrdown {
+    margin-left: 2px;
+  }
+  
+  .header {
+    transition: top 0.5s ease-in-out;
+  }
+  
+  body {
+    background-color: white;
+    margin: 0;
+  }
+  
+  .props {
     align-items: center;
     display: flex;
-}
-
-.props img{
-    height: 400px;
-    align-items: flex-start;
-    margin-right: 150%;
-}
-
-.props h2{
-    align-items: flex-end;
-    font-size: 40px;
-}
-
-.threel img {
-    height: 80px;
+    margin-right: 300px;
+  }
+  
+  .props h2 {
     display: flex;
-    margin-right: 50px;
-    cursor: pointer;
-}
-
-.slide-container {
-    position: fixed;
-    border: 2px solid black;
-    border-radius: 1rem;
+    justify-content: space-between;
+    align-content: space-evenly;
+    margin-right: 15px;
+    position: relative;
+    font-size: 20px;
+  }
+  
+  .props h2:last-of-type {
+    margin-right: 0%;
+  }
+  
+  .props h2:first-child {
+    margin-right: 0;
+  }
+  
+  .props h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transition: transform 0.2s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: top;
+  }
+  
+  .props h2:hover + img {
+    transform: scaleY(-1) scale(1.3);
+  }
+  
+  .props h2:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .header img {
+    filter: invert(100%);
+  }
+  
+  .propsimg img {
+    height: 400px;
+    margin-left: 0%;
+    display: flex;
     overflow: hidden;
-    top: 0;
-    right: -500px; /* Start with the slide hidden */
-    height: 100vh;
-    width: 500px;
-    background-color: #ffffff;
-    transition: right 0.5s ease-in-out;
-    z-index: 999;
+    margin-right: 20px;
+    align-items: flex-start;
+  }
+  
+  .props img {
+    height: 20px;
+    margin-right: 15px;
+  }
+  
+  .threel {
+    display: flex;
+    align-content: space-between;
+  }
+  
+  .threel img {
+    height: 40px;
+    display: flex;
+    margin-right: 30px;
+  }
+  
+
+/*  .slidecontent {
+    position: absolute;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    top: -20rem;
+    width: 80%;
+    border-top: 0px solid transparent;
+    border-bottom: 2px solid black;
+    height: 20rem;
+    background-color: #FFFFFF;
+    transition: left 0.3s ease-in-out, top 0.3s ease-in-out;
+    z-index: 1;
+  }
+  
+  .props h2.catcls:hover + .slidecontent,
+  .slidecontent.active {
+    left: 10%;
+    top: 6rem;
+  }
+  
+  .slidecontent:hover {
+    transition: left 0.3s ease-in-out;
+  }
+  */
+
+  .products {
+    font-family: 'FuturaExBB';
+    font-size: 20px;
+    height: 8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .products img {
+    margin: 0 0.8rem;
+    border-radius: 50%;
+    border: 1px solid transparent;
+  }
+  
+  .product-alt {
+    margin-top: 0.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .product-item:hover img {
+    border: 2px solid black; 
+  }
+  
+  .product-item:hover .product-alt {
+    border: 3px solid transparent;
+    font-size: 22px;
+    border-radius: 10%;
+  }
+
+  .sldshowwhole {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    justify-content: center;
+    left: 1%;
+    width: 1438px;
+    height: 526px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .slide{
+    display: none;
+}
+.slide img{
+    height: 530px;
+    width: 1440px;
+    width: auto; 
+    object-fit: cover; 
+     
 }
 
-.slide-container img{
-    height: 100px;
+.prev-btn,
+.next-btn {
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 100px;
     cursor: pointer;
-    margin-left: 80%;
-    
 }
 
-.slide-container.active {
-    right: 0; /* Show the slide by moving it to the right */
+.prev-btn {
+    left: 20px;
+    top: 70%;
+}
+
+.next-btn {
+  right: 20px;
+  top: 70%;
+}
+.prev-btn,
+.next-btn img{
+  filter: invert(transparent);
+}
+
+
+.navigation-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  box-shadow: 0 0 10px 1px black, 0 0 0 1px black;  
+  background: #E9464E;
+}
+
+.heading-block {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.heading-block h2 {
+  font-family: 'FuturaExBB';
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.heading-block h2:before,
+.heading-block h2:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 140px; 
+  height: 2px; 
+  background-color: black; 
+}
+
+.heading-block h2:before {
+  left: -170px; 
+}
+
+.heading-block h2:after {
+  right: -170px;
 }
