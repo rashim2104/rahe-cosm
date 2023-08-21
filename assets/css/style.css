@@ -403,7 +403,7 @@
   border: 3px solid #901913;
   color: white;
   display: inline-block;
-  right: -47%;
+  right: -47.5%;
   border-radius: 6rem;
   padding: 3px 20px;
   position: relative;
@@ -428,8 +428,8 @@
 
 .foottext img{
   height: 200px;
-  top: 0%;
-  margin-right: 20px;
+  justify-content: center;
+  align-self: center;
 }
 
 .foottext p{
@@ -437,8 +437,52 @@
   
 }
 
+.centered-image {
+  display: block;
+  margin: 0 auto;
+}
+
 .footertext{
   font-family: 'FuturaBook';
-  margin-left: 20px;
-  width: 75%;
+}
+
+.footertext {
+  width: 80%;
+  padding: 0 10%;
+  text-align: center;
+}
+
+.footertext p{
+  justify-content: center;
+  align-content: center;
+}
+
+.items{
+  align-items: center;
+  justify-content: center;
+}
+
+.dev{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid white;
+  height: 11rem;
+  background-color: black;
+  color: white;
+  font-family: 'FuturaBook';
+}
+
+.social-handles{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.social-handles img{
+  margin: 0 10px; /* Add some horizontal margin to the images */
+  height: 100px;
+  filter: invert(100%);
 }
