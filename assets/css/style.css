@@ -138,14 +138,15 @@
   
   .threel {
     display: flex;
-    align-content: space-between;
+    align-items: center; /* Vertically center the images */
+    justify-content: flex-start; /* Align items to the hard left */
   }
   
   .threel img {
     height: 40px;
-    display: flex;
     margin-right: 30px;
   }
+  
   
 
 /*  .slidecontent {
